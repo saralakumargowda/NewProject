@@ -25,8 +25,6 @@ WebDriver driver;
 	public void searchProduct(String value) {
 		searchValue.sendKeys(value);
 		clickonSearchButton.click();
-		
-		
 	}
 
 	public HomePage trackOrder() {

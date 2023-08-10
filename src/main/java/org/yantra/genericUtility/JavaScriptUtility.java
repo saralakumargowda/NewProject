@@ -16,7 +16,7 @@ public class JavaScriptUtility {
 		 */
 		public void intializeJsExecutor(WebDriver driver) {
 
-			jse = (JavascriptExecutor) driver;
+			JavascriptExecutor jse = (JavascriptExecutor) driver;
 		}
 		/**
 		 * Navigate app by using JavascriptExecutor

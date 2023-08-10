@@ -27,7 +27,7 @@ public class JavaUtility {
 		 * @return
 		 */
 
-		public int getRandomNumber()
+		public int getRandomNumber() 
 		{
 			return new Random().nextInt(1000);
 		}
@@ -69,22 +69,7 @@ public class JavaUtility {
 			System.out.println(statement);
 
 		}
-		/**This method is used to take the current page screenshot
-		 * @param currentClass
-		 * @param javaUtility
-		 */
-		public void takesScreenShortPage(Object currentClass,JavaUtility javaUtility)
-		{
-			TakesScreenshot ts=(TakesScreenshot)driver;
-			File src=ts.getScreenshotAs(OutputType.FILE);
-			File trg=new File("./erroshots/"+currentClass.getClass().getSimpleName()+"_"+javaUtility.getCurrentDate("dd_MM_yyyy_HH_mm_ss")+".png");
-		try {
-			FileUtils.copyFile(src,trg);
-		} catch (IOException e) {
-			e.printStackTrace();   
-		}
-			
-		}
+		
 		public int convertMonthfromStringtoInt(String strategy,String monthName)
 		{
 		return DateTimeFormatter.ofPattern(strategy).withLocale(Locale.ENGLISH).parse(monthName).get(ChronoField.MONTH_OF_YEAR);

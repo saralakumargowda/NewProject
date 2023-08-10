@@ -1,6 +1,7 @@
 package org.yantra.genericUtility;
 
 import org.openqa.selenium.WebDriver;
+import org.shopping_portal.objectRepository.ActiTimeLoginPage;
 import org.shopping_portal.objectRepository.LoginPagevtiger;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -8,8 +9,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
-public class BaseClass extends InstanceClass {
-	public static WebDriver listenerdriver;
+public class BaseClass extends  InstanceClass {
+	public static WebDriver listenerdriver; 
+	protected static WebDriver driver;
 	/**
 	 * This method used to open browser and Url
 	 */
@@ -30,9 +32,9 @@ public class BaseClass extends InstanceClass {
 
 		// Fetch data from Property file
 		//browser = fileUtility.getDataFromPropertyFile("browser");
-		url = fileUtility.getDataFromPropertyFile("urlamazon");
-		username = fileUtility.getDataFromPropertyFile("usernamevt");
-		password = fileUtility.getDataFromPropertyFile("passwordvt");
+		url = fileUtility.getDataFromPropertyFile("urlActiTime");
+		username = fileUtility.getDataFromPropertyFile("username");
+		password = fileUtility.getDataFromPropertyFile("password");
 		String timeouts = fileUtility.getDataFromPropertyFile("timeout");
 		longTimeout = javaUtility.convertStringToLong(timeouts);
 
@@ -60,7 +62,9 @@ public class BaseClass extends InstanceClass {
 	public void login() {
 
 		// Create object for common POM Repository classes
-		login.loginAction(username, password);
+		ActiTimeLoginPage actiTime=new ActiTimeLoginPage(driver);
+		actiTime.loginTheApplication();
+		//actiTime.clickOnForgotPasswordButton();
 
 	}
 
@@ -77,7 +81,7 @@ public class BaseClass extends InstanceClass {
 	 */
 	@AfterClass(alwaysRun=true)
 	public void classTearDown() {
-		excelUtility.workbookClose();
+		//excelUtility.workbookClose();
 		webdriverUtility.closeBrowser();
 	}
 }

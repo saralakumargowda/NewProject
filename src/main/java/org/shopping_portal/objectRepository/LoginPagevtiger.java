@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPagevtiger {
-
+WebDriver driverl;
 	@FindBy(xpath ="//input[@name='user_name']")
 	private WebElement usernamevt;
 	@FindBy(xpath = "//input[@name='user_password']")
@@ -17,7 +17,7 @@ public class LoginPagevtiger {
 	public LoginPagevtiger(WebDriver driver) {
 
 		PageFactory.initElements(driver, this);
-
+driverl=driver;
 	}
 
 	/**

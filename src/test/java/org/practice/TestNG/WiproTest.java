@@ -1,7 +1,5 @@
 package org.practice.TestNG;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import org.yantra.genericUtility.BaseClass;
 import org.yantra.genericUtility.IpathConstants;

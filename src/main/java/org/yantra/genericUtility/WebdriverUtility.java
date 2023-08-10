@@ -8,6 +8,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -19,7 +20,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
  * This class contains all WebDriver actions used in programs
- * @author DELL
+ * @author Manigandan Palluru
  *
  */
 public class WebdriverUtility {
@@ -27,6 +28,7 @@ public class WebdriverUtility {
 	Actions act;
 	WebDriverWait wait;
 	Alert alert;
+	ChromeOptions option;
 	/**
 	 * This method is used to choose browser
 	 * @param browser
@@ -34,15 +36,17 @@ public class WebdriverUtility {
 	 */
 	public WebDriver setupDriver(String browser)
 	{
+		option = new ChromeOptions();
+        option.addArguments("--remote-allow-origins=*");
 
 		switch(browser) {
-		case"edge":WebDriverManager.edgedriver().setup();
+		case"edge":
+		WebDriverManager.edgedriver().setup(); 
 		driver= new EdgeDriver();
-		
 		break;
 		case"chrome":
 		WebDriverManager.chromedriver().setup();
-		driver= new ChromeDriver();
+		driver= new ChromeDriver(option);
 		break;
 		case"firefox":
 			WebDriverManager.firefoxdriver().setup();
@@ -273,6 +277,7 @@ public class WebdriverUtility {
 		alert.dismiss();
 	}
 	/**
+	 * @author Tasmayi gowda
 	 * This method is used to Enter values in Alert PopUp
 	 * @param value
 	 */
@@ -281,6 +286,8 @@ public class WebdriverUtility {
 		alert.sendKeys(value);
 	}
 	/**
+	 * @author Tasmayi Gowda
+	 * @date 27th July 2023
 	 * This method is used to close All opened Browser
 	 */
 	public void closeBrowser()

@@ -1,0 +1,1 @@
+{"uuid":"4a66fc0f-5e50-4c83-9e2d-92d575d336eb","name":"assignment.Assert_Example.login","children":["120a1dea-4949-4ddb-95a4-430b554acb4f"],"description":"","befores":[{"name":"login","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1691581075478,"stop":1691581075479}],"afters":[],"start":1691581075478,"stop":1691581075479}

@@ -1,9 +1,7 @@
 package org.yantra.genericUtility;
 
-import org.openqa.selenium.WebDriver;
 import org.shopping_portal.objectRepository.LoginPagevtiger;
 public class InstanceClass {
-	public WebDriver driver;
 	public ExcelUtility excelUtility;
 	public JavaUtility javaUtility; 
 	public FileUtility fileUtility;
@@ -16,6 +14,7 @@ public class InstanceClass {
 	protected String browser;
 	protected Long longTimeout;
 	public int randomnumber;
+
 	//protected LoginPage loginPage;
 	//protected CommonPage commonpage;
 	protected LoginPagevtiger login;
