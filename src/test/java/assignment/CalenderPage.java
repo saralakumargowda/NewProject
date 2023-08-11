@@ -46,6 +46,9 @@ public class CalenderPage {
 		driver.findElement(By.xpath("//input[@id='second_date_picker']")).click();
 		String CurrentYear = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']")).getText();
 		System.out.println(CurrentYear);
+		System.out.println(CurrentYear);
+		System.out.println(CurrentYear);
+		System.out.println(CurrentYear);
 		while (!CurrentYear.equals(requireddate)) {
 			driver.findElement(By.xpath("//span[text()='Next']")).click();
 			CurrentYear = driver.findElement(By.xpath("//div[@class='ui-datepicker-title']")).getText();
