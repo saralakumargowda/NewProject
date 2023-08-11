@@ -95,7 +95,9 @@ public class Assert_Example {
 	@Parameters("browser")
 	public static void afterClass() {
 		System.out.println("After class close the driver");
-
+		
+		System.out.println("After class close the driver");
+		
 	}
 
 }
