@@ -24,6 +24,9 @@ public class ActiPopup extends BaseClass{
 		wbUtility.initializeAlertPopup();
     	wbUtility.acceptAlertpopup();
     	wbUtility.senKeysAlertpopup("Alert Pop Up");
+    	wbUtility.senKeysAlertpopup("Alert Pop Up");
+    	wbUtility.senKeysAlertpopup("Alert Pop Up");
+    	wbUtility.senKeysAlertpopup("Alert Pop Up");
 	
 	}
 }
