@@ -39,6 +39,10 @@ public class Assert_Example {
 		System.out.println("Both strings are equal");
 		Assert.assertTrue(Expected.contains(Actual));
 		System.out.println("true");
+		System.out.println("true");
+		System.out.println("true");
+		System.out.println("true");
+		
 	}
 
 //		 
