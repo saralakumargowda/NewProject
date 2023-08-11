@@ -38,22 +38,6 @@ public class Assert_Example {
 		Assert.assertEquals(Actual, Expected);
 		System.out.println("Both strings are equal");
 		Assert.assertTrue(Expected.contains(Actual));
-		System.out.println("true");
-		System.out.println("true");
-		System.out.println("true");
-		System.out.println("true");
-		
-	}
-
-//		 
-		//driver.findElement(
-//				By.xpath("//div[@class='popup_menu_button popup_menu_button_settings  popup_menu_button_pressed']"))
-//				.click();
-//		driver.findElement(By.xpath("//a[text()='Types of Work']")).click();
-//
-//		String txt = driver.findElement(By.xpath("//span[text()='Create Type of Work']")).getText();
-//		System.out.println(txt);
-//		driver.quit();
 		
 	@FindBy(xpath="//div[@class='popup_menu_button popup_menu_button_settings  popup_menu_button_pressed']") private WebElement popup;
 
